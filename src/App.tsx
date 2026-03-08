@@ -18,7 +18,7 @@ import {
 import { cn } from './lib/utils';
 
 // --- Types ---
-type Section = 'home' | 'research' | 'teaching' | 'products' | 'daily' | 'cv';
+type Section = 'home' | 'research' | 'teaching' | 'products' | 'daily';
 type Language = 'en' | 'zh' | 'fr';
 
 // --- Translations ---
@@ -30,7 +30,6 @@ const translations = {
       teaching: 'Teaching',
       products: 'Product',
       daily: 'Daily Life',
-      cv: 'CV & LinkedIn'
     },
     home: {
       greeting: 'Hello,',
@@ -50,7 +49,6 @@ const translations = {
       teaching: '教学',
       products: '产品',
       daily: '日常生活',
-      cv: '简历与联系'
     },
     home: {
       greeting: '你好，',
@@ -70,7 +68,6 @@ const translations = {
       teaching: 'Enseignement',
       products: 'Produits',
       daily: 'Vie Quotidienne',
-      cv: 'CV & LinkedIn'
     },
     home: {
       greeting: 'Bonjour,',
@@ -105,7 +102,6 @@ const Navbar = ({
     { id: 'teaching', label: t.teaching },
     { id: 'products', label: t.products },
     { id: 'daily', label: t.daily },
-    { id: 'cv', label: t.cv },
   ];
 
   return (
@@ -178,23 +174,12 @@ const Home = ({ lang }: { lang: Language }) => {
         <p className="text-xl md:text-2xl text-[#555] font-light leading-relaxed mb-12">
           {t.intro}
         </p>
-        <div className="flex gap-6">
-          <a href="mailto:shuai.chen@mail.mcgill.ca" className="flex items-center gap-2 text-sm font-medium hover:underline">
-            <Mail size={18} /> {t.cta}
-          </a>
-          <a href="https://github.com/JerryChen-McGill" target="_blank" rel="noreferrer" className="flex items-center gap-2 text-sm font-medium hover:underline">
-            <Github size={18} /> GitHub
-          </a>
-          <a href="https://www.linkedin.com/in/jerry-chen-mcgill/" target="_blank" rel="noreferrer" className="flex items-center gap-2 text-sm font-medium hover:underline">
-            <Linkedin size={18} /> LinkedIn
-          </a>
-        </div>
       </div>
       
       <div className="flex-1 w-full max-w-md">
         <div className="aspect-[4/5] bg-black/5 rounded-[40px] overflow-hidden relative group">
           <img 
-            src="/Personal-website/Personal-website/img/portfolio.jpg" 
+            src="/Personal-website/img/portfolio.jpg" 
             alt="Jerry Chen" 
             className="w-full h-full object-cover"
             referrerPolicy="no-referrer"
@@ -340,7 +325,17 @@ const Teaching = () => {
       animate={{ opacity: 1 }}
       className="max-w-5xl pt-12"
     >
-      <h2 className="section-title">Teaching Experience</h2>
+      <div className="flex justify-between items-start mb-12">
+        <h2 className="section-title">Teaching Experience</h2>
+        <a 
+          href="https://mcgill-my.sharepoint.com/:b:/r/personal/shuai_chen_mail_mcgill_ca/Documents/Intern%20%26%20Career/Resume/Resume_Jerry%20Chen_Teaching.pdf?csf=1&web=1&e=pT2MQh" 
+          target="_blank" 
+          rel="noreferrer"
+          className="inline-flex items-center gap-2 px-6 py-3 bg-[#2D2D2D] text-white rounded-full text-sm font-medium hover:bg-black transition-colors"
+        >
+          <FileText size={18} /> View Resume
+        </a>
+      </div>
       <div className="space-y-32">
         {experiences.map((exp, i) => (
           <div key={i} className={cn("flex flex-col md:flex-row gap-12 items-start", i % 2 === 1 && "md:flex-row-reverse")}>
@@ -400,6 +395,16 @@ const Products = ({ lang }: { lang: Language }) => {
       className="max-w-5xl pt-12"
     >
       <h2 className="section-title">Product Building</h2>
+      <div className="flex justify-end mb-8">
+        <a 
+          href="https://mcgill-my.sharepoint.com/:b:/g/personal/shuai_chen_mail_mcgill_ca/IQBio9_r-UYWQbZTwuLfVVb3AZ1Vkb46nD7L8ecq63fyv88?e=ThHsg4" 
+          target="_blank" 
+          rel="noreferrer"
+          className="inline-flex items-center gap-2 px-6 py-3 bg-[#2D2D2D] text-white rounded-full text-sm font-medium hover:bg-black transition-colors"
+        >
+          <FileText size={18} /> View Resume
+        </a>
+      </div>
       <div className="space-y-16">
         {products.map((p, i) => (
           <div key={i} className="group relative rounded-[40px] overflow-hidden border border-black/5 bg-white">
@@ -490,88 +495,6 @@ const DailyLife = ({ lang }: { lang: Language }) => {
   );
 };
 
-const CV = ({ lang }: { lang: Language }) => (
-  <motion.div 
-    initial={{ opacity: 0 }}
-    animate={{ opacity: 1 }}
-    className="max-w-4xl pt-12 pb-24 mx-auto"
-  >
-    <div className="text-center mb-16">
-      <h2 className="section-title">CV & Connections</h2>
-      <p className="text-[#666] max-w-xl mx-auto">
-        Find my complete professional record and connect with me through the following platforms.
-      </p>
-    </div>
-
-    <div className="grid md:grid-cols-2 gap-8">
-      <div className="space-y-6">
-        <h3 className="text-sm font-bold uppercase tracking-widest text-[#AAA] mb-4">Professional Links</h3>
-        <div className="space-y-4">
-          <a href="https://www.linkedin.com/in/jerry-chen-mcgill/" target="_blank" rel="noreferrer" className="flex items-center justify-between p-6 bg-white border border-black/5 rounded-[32px] hover:shadow-xl transition-all group">
-            <div className="flex items-center gap-4">
-              <div className="w-12 h-12 bg-[#0077B5]/10 rounded-2xl flex items-center justify-center">
-                <Linkedin size={24} className="text-[#0077B5]" />
-              </div>
-              <div>
-                <span className="block font-bold">LinkedIn</span>
-                <span className="text-xs text-[#AAA]">Professional Network</span>
-              </div>
-            </div>
-            <ChevronRight size={20} className="text-[#AAA] group-hover:translate-x-1 transition-transform" />
-          </a>
-
-          <a href="https://github.com/JerryChen-McGill" target="_blank" rel="noreferrer" className="flex items-center justify-between p-6 bg-white border border-black/5 rounded-[32px] hover:shadow-xl transition-all group">
-            <div className="flex items-center gap-4">
-              <div className="w-12 h-12 bg-black/5 rounded-2xl flex items-center justify-center">
-                <Github size={24} />
-              </div>
-              <div>
-                <span className="block font-bold">GitHub</span>
-                <span className="text-xs text-[#AAA]">Code & Projects</span>
-              </div>
-            </div>
-            <ChevronRight size={20} className="text-[#AAA] group-hover:translate-x-1 transition-transform" />
-          </a>
-
-          <a href="mailto:shuai.chen@mail.mcgill.ca" className="flex items-center justify-between p-6 bg-white border border-black/5 rounded-[32px] hover:shadow-xl transition-all group">
-            <div className="flex items-center gap-4">
-              <div className="w-12 h-12 bg-emerald-50 rounded-2xl flex items-center justify-center">
-                <Mail size={24} className="text-emerald-600" />
-              </div>
-              <div>
-                <span className="block font-bold">Email</span>
-                <span className="text-xs text-[#AAA]">Direct Contact</span>
-              </div>
-            </div>
-            <ChevronRight size={20} className="text-[#AAA] group-hover:translate-x-1 transition-transform" />
-          </a>
-        </div>
-      </div>
-
-      <div className="flex flex-col">
-        <h3 className="text-sm font-bold uppercase tracking-widest text-[#AAA] mb-4">Documents</h3>
-        <div className="flex-1 p-10 bg-[#2D2D2D] text-white rounded-[40px] flex flex-col justify-center items-center text-center group">
-          <div className="w-20 h-20 bg-white/10 rounded-3xl flex items-center justify-center mb-8 group-hover:scale-110 transition-transform duration-500">
-            <FileText size={40} className="text-white/80" />
-          </div>
-          <h3 className="text-3xl font-serif italic mb-4">Curriculum Vitae</h3>
-          <p className="text-sm text-white/60 mb-10 max-w-xs">
-            Access my full academic and professional journey via Google Docs.
-          </p>
-          <a 
-            href="https://docs.google.com/document/d/1ISTeii31qJ0XzVYvTRXLys1qS5y4nvQ8BvBhtQu2UM8/edit?usp=sharing" 
-            target="_blank" 
-            rel="noreferrer"
-            className="w-full py-5 bg-white text-black rounded-2xl text-sm font-bold hover:bg-[#FDFCFB] transition-all flex items-center justify-center gap-2 shadow-lg"
-          >
-            Open CV Document <ExternalLink size={18} />
-          </a>
-        </div>
-      </div>
-    </div>
-  </motion.div>
-);
-
 export default function App() {
   const [activeSection, setActiveSection] = useState<Section>('home');
   const [lang, setLang] = useState<Language>('en');
@@ -583,7 +506,6 @@ export default function App() {
       case 'teaching': return <Teaching />;
       case 'products': return <Products lang={lang} />;
       case 'daily': return <DailyLife lang={lang} />;
-      case 'cv': return <CV lang={lang} />;
       default: return <Home lang={lang} />;
     }
   };
@@ -614,9 +536,11 @@ export default function App() {
       <footer className="max-w-6xl mx-auto px-6 py-12 border-t border-black/5 flex flex-col md:flex-row justify-between items-center gap-4 text-[#AAA] text-xs mt-24">
         <p>© {new Date().getFullYear()} Jerry Chen. Built with passion and code.</p>
         <div className="flex gap-6">
+          <a href="mailto:shuai.chen@mail.mcgill.ca" className="flex items-center gap-1 hover:text-[#2D2D2D] transition-colors">
+            <Mail size={14} /> Say Hello
+          </a>
           <a href="https://github.com/JerryChen-McGill" className="hover:text-[#2D2D2D] transition-colors">GitHub</a>
           <a href="https://www.linkedin.com/in/jerry-chen-mcgill/" className="hover:text-[#2D2D2D] transition-colors">LinkedIn</a>
-          <a href="mailto:shuai.chen@mail.mcgill.ca" className="hover:text-[#2D2D2D] transition-colors">Contact</a>
         </div>
       </footer>
     </div>
