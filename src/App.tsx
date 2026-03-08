@@ -179,7 +179,7 @@ const Home = ({ lang }: { lang: Language }) => {
       <div className="flex-1 w-full max-w-md">
         <div className="aspect-[4/5] bg-black/5 rounded-[40px] overflow-hidden relative group">
           <img 
-            src="/Personal-website/img/portfolio.jpg" 
+            src="/Personal-website/img/me.PNG" 
             alt="Jerry Chen" 
             className="w-full h-full object-cover"
             referrerPolicy="no-referrer"
@@ -376,15 +376,15 @@ const Products = ({ lang }: { lang: Language }) => {
   const products = [
     {
       name: "Personal Portfolio",
-      desc: lang === 'zh' ? '我在教育、研究和产品开发方面的历程展示。' : lang === 'fr' ? "Un aperçu de mon parcours dans l'éducation, la recherche et le développement de produits." : "A showcase of my journey in education, research, and product development.",
+      desc: lang === 'zh' ? '我在教育、研究和产品开发方面的历程展示。' : lang === 'fr' ? "Un aperçu de mon parcours dans l'éducation, la recherche et le développement de produits." : "Showcasing innovative products I've built — from AI-powered learning tools to engaging educational platforms that transform how people learn.",
       link: "https://jerrychen-mcgill.github.io/Personal-website/",
       image: "/Personal-website/img/portfolio.jpg"
     },
     {
       name: "GitHub Projects",
-      desc: "Explore my open-source contributions and technical experiments.",
+      desc: lang === 'zh' ? '探索我的开源贡献和技术实验。' : lang === 'fr' ? "Explorez mes contributions open-source et mes expérimentations techniques." : "Explore my open-source contributions and technical experiments.",
       link: "https://github.com/JerryChen-McGill",
-      image: "https://picsum.photos/seed/github/1200/800"
+      image: "/Personal-website/img/GitHub Projects.JPG"
     }
   ];
 
@@ -443,25 +443,25 @@ const DailyLife = ({ lang }: { lang: Language }) => {
       title: lang === 'zh' ? '练字' : lang === 'fr' ? 'Calligraphie' : 'Calligraphy', 
       desc: lang === 'zh' ? '在每一笔中寻找平静。我每天练习中国传统书法。' : lang === 'fr' ? "Trouver la paix dans chaque trait. Je pratique la calligraphie traditionnelle chinoise quotidiennement." : "Finding peace in every stroke. I practice traditional Chinese calligraphy daily.", 
       icon: "🖋️", 
-      image: "https://picsum.photos/seed/ink/600/800" 
+      image: "/Personal-website/img/Calligraphy.jpg" 
     },
     { 
       title: lang === 'zh' ? '桌游' : lang === 'fr' ? 'Jeux de Société' : 'Board Games', 
       desc: lang === 'zh' ? '策略、社交和乐趣。卡坦岛和火星改造是我最喜欢的。' : lang === 'fr' ? "Stratégie, interaction sociale et plaisir. Catan et Terraforming Mars sont mes favoris." : "Strategy, social interaction, and fun. Catan and Terraforming Mars are my favorites.", 
       icon: "🎲", 
-      image: "https://picsum.photos/seed/tabletop/600/800" 
+      image: "/Personal-website/img/boardgame.jpg" 
     },
     { 
       title: lang === 'zh' ? '飞盘' : lang === 'fr' ? 'Disque Volant' : 'Frisbee', 
       desc: lang === 'zh' ? '运动与社区精神的完美结合。极限飞盘是我周末的仪式。' : lang === 'fr' ? "Le mélange parfait d'athlétisme et d'esprit communautaire. Le Frisbee ultime est mon rituel du week-end." : "The perfect mix of athleticism and community spirit. Ultimate Frisbee is my weekend ritual.", 
       icon: "🥏", 
-      image: "https://picsum.photos/seed/sport/600/800" 
+      image: "/Personal-website/img/Frisbee.jpg" 
     },
     { 
       title: lang === 'zh' ? '看书' : lang === 'fr' ? 'Lecture' : 'Reading', 
       desc: lang === 'zh' ? '哲学、科幻和技术类非虚构书籍的终身阅读之旅。' : lang === 'fr' ? "Un parcours à vie à travers la philosophie, la science-fiction et la非fiction technique." : "A lifelong journey through philosophy, sci-fi, and technical non-fiction.", 
       icon: "📚", 
-      image: "https://picsum.photos/seed/library/600/800" 
+      image: "/Personal-website/img/reading.jpg" 
     },
   ];
 
