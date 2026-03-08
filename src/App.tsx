@@ -412,7 +412,7 @@ const Teaching = ({ lang }: { lang: Language }) => {
       <div className="flex justify-between items-start mb-12">
         <h2 className="section-title">{t.title}</h2>
         <a 
-          href="https://mcgill-my.sharepoint.com/:b:/r/personal/shuai_chen_mail_mcgill_ca/Documents/Intern%20%26%20Career/Resume/Resume_Jerry%20Chen_Teaching.pdf?csf=1&web=1&e=pT2MQh" 
+          href="https://mcgill-my.sharepoint.com/:b:/g/personal/shuai_chen_mail_mcgill_ca/IQCRUZiC7t4rSoNyWh5DlNm6Aeui2ddzFZXotaF4ZoHQq40" 
           target="_blank" 
           rel="noreferrer"
           className="inline-flex items-center gap-2 px-6 py-3 bg-[#2D2D2D] text-white rounded-full text-sm font-medium hover:bg-black transition-colors"
@@ -462,7 +462,7 @@ const Products = ({ lang }: { lang: Language }) => {
     {
       name: "Personal Portfolio",
       desc: lang === 'zh' ? '我在教育、研究和产品开发方面的历程展示。' : lang === 'fr' ? "Un aperçu de mon parcours dans l'éducation, la recherche et le développement de produits." : "Showcasing innovative products I've built — from AI-powered learning tools to engaging educational platforms that transform how people learn.",
-      link: "https://jerrychen-mcgill.github.io/Personal-website/",
+      link: "https://jerrychen-mcgill.github.io",
       image: "/Personal-website/img/portfolio.jpg"
     },
     {
