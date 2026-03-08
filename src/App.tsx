@@ -179,7 +179,7 @@ const Home = ({ lang }: { lang: Language }) => {
           {t.intro}
         </p>
         <div className="flex gap-6">
-          <a href="mailto:jerrychenmcgill@gmail.com" className="flex items-center gap-2 text-sm font-medium hover:underline">
+          <a href="mailto:shuai.chen@mail.mcgill.ca" className="flex items-center gap-2 text-sm font-medium hover:underline">
             <Mail size={18} /> {t.cta}
           </a>
           <a href="https://github.com/JerryChen-McGill" target="_blank" rel="noreferrer" className="flex items-center gap-2 text-sm font-medium hover:underline">
@@ -193,14 +193,10 @@ const Home = ({ lang }: { lang: Language }) => {
       
       <div className="flex-1 w-full max-w-md">
         <div className="aspect-[4/5] bg-black/5 rounded-[40px] overflow-hidden relative group">
-          <div className="absolute inset-0 flex items-center justify-center text-[#AAA] font-serif italic">
-            {/* Placeholder for photo */}
-            Photo Space
-          </div>
           <img 
-            src="https://picsum.photos/seed/jerry/800/1000" 
+            src="/Personal-website/img/portfolio.jpg" 
             alt="Jerry Chen" 
-            className="w-full h-full object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-700"
+            className="w-full h-full object-cover"
             referrerPolicy="no-referrer"
           />
         </div>
@@ -249,7 +245,7 @@ const Research = ({ lang }: { lang: Language }) => {
           {t.intro}
         </p>
         <a 
-          href="https://sites.google.com/view/shuaijerrychen/cv?authuser=0" 
+          href="https://docs.google.com/document/d/1ISTeii31qJ0XzVYvTRXLys1qS5y4nvQ8BvBhtQu2UM8/edit?usp=sharing" 
           target="_blank" 
           rel="noreferrer"
           className="inline-flex items-center gap-2 px-6 py-3 bg-[#2D2D2D] text-white rounded-full text-sm font-medium hover:bg-black transition-colors"
@@ -300,7 +296,7 @@ const Teaching = () => {
         "Graded assignments and presentations covering multiple regression, ANOVA, ANCOVA, and related statistical methods.",
         "Received strong positive feedback from both students and the course instructor."
       ],
-      image: "https://picsum.photos/seed/mcgill/800/600",
+      image: "/Personal-website/img/ta.jpg",
       location: "On-site"
     },
     {
@@ -311,7 +307,7 @@ const Teaching = () => {
         "Worked as a camp counselor, helping children build and program LEGO robots. Supported them in solving technical challenges, led daily outdoor activities, and organized final robotics competitions.",
         "Captured and edited photos and short videos on camp activities, creating engaging visual content for social media and parent communication."
       ],
-      image: "https://picsum.photos/seed/robot/800/600",
+      image: "/Personal-website/img/counselor.jpg",
       location: "On-site"
     },
     {
@@ -322,7 +318,7 @@ const Teaching = () => {
         "Taught online bilingual math to Grade 3 students from China, Netherlands, Canada, and the United States in preparation for international mathematics competitions.",
         "Utilized interactive online teaching software to deliver lessons, ensuring an engaging and effective learning experience."
       ],
-      image: "https://picsum.photos/seed/spark/800/600",
+      image: "/Personal-website/img/spark.jpg",
       location: "Online"
     },
     {
@@ -333,7 +329,7 @@ const Teaching = () => {
         "Taught Math and led STEM & sports projects for Grades 2–6. Supported daily care and outdoor activities for kindergarten children.",
         "Led 3 one-week outdoor camps, coordinating 5 teachers & 30+ students in skiing, snowball fights, and adventures."
       ],
-      image: "https://picsum.photos/seed/pioneer/800/600",
+      image: "/Personal-website/img/pioneer.jpg",
       location: "On-site"
     }
   ];
@@ -381,13 +377,13 @@ const Teaching = () => {
   );
 };
 
-const Products = () => {
+const Products = ({ lang }: { lang: Language }) => {
   const products = [
     {
       name: "Personal Portfolio",
-      desc: "A showcase of my journey in education, research, and product development.",
-      link: "https://jerrychen-mcgill.github.io/",
-      image: "https://picsum.photos/seed/portfolio/1200/800"
+      desc: lang === 'zh' ? '我在教育、研究和产品开发方面的历程展示。' : lang === 'fr' ? "Un aperçu de mon parcours dans l'éducation, la recherche et le développement de produits." : "A showcase of my journey in education, research, and product development.",
+      link: "https://jerrychen-mcgill.github.io/Personal-website/",
+      image: "/Personal-website/img/portfolio.jpg"
     },
     {
       name: "GitHub Projects",
@@ -436,12 +432,32 @@ const Products = () => {
   );
 };
 
-const DailyLife = () => {
+const DailyLife = ({ lang }: { lang: Language }) => {
   const interests = [
-    { title: "练字 (Calligraphy)", desc: "Finding peace in every stroke. I practice traditional Chinese calligraphy daily.", icon: "🖋️", image: "https://picsum.photos/seed/ink/600/800" },
-    { title: "桌游 (Board Games)", desc: "Strategy, social interaction, and fun. Catan and Terraforming Mars are my favorites.", icon: "🎲", image: "https://picsum.photos/seed/tabletop/600/800" },
-    { title: "飞盘 (Frisbee)", desc: "The perfect mix of athleticism and community spirit. Ultimate Frisbee is my weekend ritual.", icon: "🥏", image: "https://picsum.photos/seed/sport/600/800" },
-    { title: "看书 (Reading)", desc: "A lifelong journey through philosophy, sci-fi, and technical non-fiction.", icon: "📚", image: "https://picsum.photos/seed/library/600/800" },
+    { 
+      title: lang === 'zh' ? '练字' : lang === 'fr' ? 'Calligraphie' : 'Calligraphy', 
+      desc: lang === 'zh' ? '在每一笔中寻找平静。我每天练习中国传统书法。' : lang === 'fr' ? "Trouver la paix dans chaque trait. Je pratique la calligraphie traditionnelle chinoise quotidiennement." : "Finding peace in every stroke. I practice traditional Chinese calligraphy daily.", 
+      icon: "🖋️", 
+      image: "https://picsum.photos/seed/ink/600/800" 
+    },
+    { 
+      title: lang === 'zh' ? '桌游' : lang === 'fr' ? 'Jeux de Société' : 'Board Games', 
+      desc: lang === 'zh' ? '策略、社交和乐趣。卡坦岛和火星改造是我最喜欢的。' : lang === 'fr' ? "Stratégie, interaction sociale et plaisir. Catan et Terraforming Mars sont mes favoris." : "Strategy, social interaction, and fun. Catan and Terraforming Mars are my favorites.", 
+      icon: "🎲", 
+      image: "https://picsum.photos/seed/tabletop/600/800" 
+    },
+    { 
+      title: lang === 'zh' ? '飞盘' : lang === 'fr' ? 'Disque Volant' : 'Frisbee', 
+      desc: lang === 'zh' ? '运动与社区精神的完美结合。极限飞盘是我周末的仪式。' : lang === 'fr' ? "Le mélange parfait d'athlétisme et d'esprit communautaire. Le Frisbee ultime est mon rituel du week-end." : "The perfect mix of athleticism and community spirit. Ultimate Frisbee is my weekend ritual.", 
+      icon: "🥏", 
+      image: "https://picsum.photos/seed/sport/600/800" 
+    },
+    { 
+      title: lang === 'zh' ? '看书' : lang === 'fr' ? 'Lecture' : 'Reading', 
+      desc: lang === 'zh' ? '哲学、科幻和技术类非虚构书籍的终身阅读之旅。' : lang === 'fr' ? "Un parcours à vie à travers la philosophie, la science-fiction et la非fiction technique." : "A lifelong journey through philosophy, sci-fi, and technical non-fiction.", 
+      icon: "📚", 
+      image: "https://picsum.photos/seed/library/600/800" 
+    },
   ];
 
   return (
@@ -517,7 +533,7 @@ const CV = ({ lang }: { lang: Language }) => (
             <ChevronRight size={20} className="text-[#AAA] group-hover:translate-x-1 transition-transform" />
           </a>
 
-          <a href="mailto:jerrychenmcgill@gmail.com" className="flex items-center justify-between p-6 bg-white border border-black/5 rounded-[32px] hover:shadow-xl transition-all group">
+          <a href="mailto:shuai.chen@mail.mcgill.ca" className="flex items-center justify-between p-6 bg-white border border-black/5 rounded-[32px] hover:shadow-xl transition-all group">
             <div className="flex items-center gap-4">
               <div className="w-12 h-12 bg-emerald-50 rounded-2xl flex items-center justify-center">
                 <Mail size={24} className="text-emerald-600" />
@@ -565,8 +581,8 @@ export default function App() {
       case 'home': return <Home lang={lang} />;
       case 'research': return <Research lang={lang} />;
       case 'teaching': return <Teaching />;
-      case 'products': return <Products />;
-      case 'daily': return <DailyLife />;
+      case 'products': return <Products lang={lang} />;
+      case 'daily': return <DailyLife lang={lang} />;
       case 'cv': return <CV lang={lang} />;
       default: return <Home lang={lang} />;
     }
@@ -600,7 +616,7 @@ export default function App() {
         <div className="flex gap-6">
           <a href="https://github.com/JerryChen-McGill" className="hover:text-[#2D2D2D] transition-colors">GitHub</a>
           <a href="https://www.linkedin.com/in/jerry-chen-mcgill/" className="hover:text-[#2D2D2D] transition-colors">LinkedIn</a>
-          <a href="mailto:jerrychenmcgill@gmail.com" className="hover:text-[#2D2D2D] transition-colors">Contact</a>
+          <a href="mailto:shuai.chen@mail.mcgill.ca" className="hover:text-[#2D2D2D] transition-colors">Contact</a>
         </div>
       </footer>
     </div>
