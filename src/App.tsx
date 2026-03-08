@@ -543,7 +543,7 @@ const DailyLife = ({ lang }: { lang: Language }) => {
       title: lang === 'zh' ? '飞盘' : lang === 'fr' ? 'Disque Volant' : 'Frisbee', 
       desc: lang === 'zh' ? '运动与社区精神的完美结合。极限飞盘是我周末的仪式。' : lang === 'fr' ? "Le mélange parfait d'athlétisme et d'esprit communautaire. Le Frisbee ultime est mon rituel du week-end." : "The perfect mix of athleticism and community spirit. Ultimate Frisbee is my weekend ritual.", 
       icon: "🥏", 
-      image: "/Personal-website/img/Frisbee.jpg" 
+      image: "/Personal-website/img/Frisbee1.JPG" 
     },
     { 
       title: lang === 'zh' ? '看书' : lang === 'fr' ? 'Lecture' : 'Reading', 
