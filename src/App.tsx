@@ -194,7 +194,7 @@ const Home = ({ lang }: { lang: Language }) => {
       <div className="flex-1 w-full max-w-md">
         <div className="aspect-[4/5] bg-black/5 rounded-[40px] overflow-hidden relative group">
           <img 
-            src="/img/portfolio.jpg" 
+            src="/Personal-website/Personal-website/img/portfolio.jpg" 
             alt="Jerry Chen" 
             className="w-full h-full object-cover"
             referrerPolicy="no-referrer"
@@ -296,7 +296,7 @@ const Teaching = () => {
         "Graded assignments and presentations covering multiple regression, ANOVA, ANCOVA, and related statistical methods.",
         "Received strong positive feedback from both students and the course instructor."
       ],
-      image: "/img/ta.jpg",
+      image: "/Personal-website/img/ta.jpg",
       location: "On-site"
     },
     {
@@ -307,7 +307,7 @@ const Teaching = () => {
         "Worked as a camp counselor, helping children build and program LEGO robots. Supported them in solving technical challenges, led daily outdoor activities, and organized final robotics competitions.",
         "Captured and edited photos and short videos on camp activities, creating engaging visual content for social media and parent communication."
       ],
-      image: "/img/counselor.jpg",
+      image: "/Personal-website/img/counselor.jpg",
       location: "On-site"
     },
     {
@@ -318,7 +318,7 @@ const Teaching = () => {
         "Taught online bilingual math to Grade 3 students from China, Netherlands, Canada, and the United States in preparation for international mathematics competitions.",
         "Utilized interactive online teaching software to deliver lessons, ensuring an engaging and effective learning experience."
       ],
-      image: "/img/spark.jpg",
+      image: "/Personal-website/img/spark.jpg",
       location: "Online"
     },
     {
@@ -329,7 +329,7 @@ const Teaching = () => {
         "Taught Math and led STEM & sports projects for Grades 2–6. Supported daily care and outdoor activities for kindergarten children.",
         "Led 3 one-week outdoor camps, coordinating 5 teachers & 30+ students in skiing, snowball fights, and adventures."
       ],
-      image: "/img/pioneer.jpg",
+      image: "/Personal-website/img/pioneer.jpg",
       location: "On-site"
     }
   ];
@@ -383,7 +383,7 @@ const Products = ({ lang }: { lang: Language }) => {
       name: "Personal Portfolio",
       desc: lang === 'zh' ? '我在教育、研究和产品开发方面的历程展示。' : lang === 'fr' ? "Un aperçu de mon parcours dans l'éducation, la recherche et le développement de produits." : "A showcase of my journey in education, research, and product development.",
       link: "https://jerrychen-mcgill.github.io/Personal-website/",
-      image: "/img/portfolio.jpg"
+      image: "/Personal-website/img/portfolio.jpg"
     },
     {
       name: "GitHub Projects",
