@@ -570,13 +570,14 @@ const DailyLife = ({ lang }: { lang: Language }) => {
             <img 
               src={item.image} 
               alt={item.title} 
-              className="w-full h-full object-cover opacity-60 group-hover:opacity-30 group-hover:scale-110 transition-all duration-500"
+              className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
               referrerPolicy="no-referrer"
             />
-            <div className="absolute inset-0 p-6 flex flex-col justify-end text-white">
+            <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            <div className="absolute bottom-0 left-0 right-0 p-6 text-white transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
               <div className="text-3xl mb-2">{item.icon}</div>
               <h3 className="text-xl font-bold mb-2">{item.title}</h3>
-              <p className="text-xs text-white/80 opacity-0 group-hover:opacity-100 transition-opacity duration-500 leading-relaxed">
+              <p className="text-xs text-white/90 leading-relaxed">
                 {item.desc}
               </p>
             </div>
