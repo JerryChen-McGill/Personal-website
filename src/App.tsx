@@ -20,7 +20,7 @@ import { cn } from './lib/utils';
 // --- Types ---
 type Section = 'home' | 'research' | 'teaching' | 'products' | 'daily';
 type Language = 'en' | 'zh' | 'fr';
-
+//test
 // --- Translations ---
 const translations = {
   en: {
