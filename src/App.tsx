@@ -236,7 +236,7 @@ const Home = ({ lang }: { lang: Language }) => {
       <div className="flex-1 w-full max-w-md">
         <div className="aspect-[4/5] bg-black/5 rounded-[40px] overflow-hidden relative group">
           <img 
-            src="/img/me.PNG" 
+            src="/Personal-website/img/me.PNG" 
             alt="Jerry Chen" 
             className="w-full h-full object-cover"
             referrerPolicy="no-referrer"
@@ -347,7 +347,7 @@ const Teaching = ({ lang }: { lang: Language }) => {
         "Graded assignments and presentations covering multiple regression, ANOVA, ANCOVA, and related statistical methods.",
         "Received strong positive feedback from both students and the course instructor."
       ],
-      image: "/img/ta.jpg",
+      image: "/Personal-website/img/ta.jpg",
       location: t.onSite
     },
     {
@@ -364,7 +364,7 @@ const Teaching = ({ lang }: { lang: Language }) => {
         "Worked as a camp counselor, helping children build and program LEGO robots. Supported them in solving technical challenges, led daily outdoor activities, and organized final robotics competitions.",
         "Captured and edited photos and short videos on camp activities, creating engaging visual content for social media and parent communication."
       ],
-      image: "/img/counselor.jpg",
+      image: "/Personal-website/img/counselor.jpg",
       location: t.onSite
     },
     {
@@ -381,7 +381,7 @@ const Teaching = ({ lang }: { lang: Language }) => {
         "Taught online bilingual math to Grade 3 students from China, Netherlands, Canada, and the United States in preparation for international mathematics competitions.",
         "Utilized interactive online teaching software to deliver lessons, ensuring an engaging and effective learning experience."
       ],
-      image: "/img/spark.jpg",
+      image: "/Personal-website/img/spark.jpg",
       location: t.online
     },
     {
@@ -398,7 +398,7 @@ const Teaching = ({ lang }: { lang: Language }) => {
         "Taught Math and led STEM & sports projects for Grades 2–6. Supported daily care and outdoor activities for kindergarten children.",
         "Led 3 one-week outdoor camps, coordinating 5 teachers & 30+ students in skiing, snowball fights, and adventures."
       ],
-      image: "/img/pioneer.jpg",
+      image: "/Personal-website/img/pioneer.jpg",
       location: t.onSite
     }
   ];
@@ -463,13 +463,13 @@ const Products = ({ lang }: { lang: Language }) => {
       name: "Personal Portfolio",
       desc: lang === 'zh' ? '我在教育、研究和产品开发方面的历程展示。' : lang === 'fr' ? "Un aperçu de mon parcours dans l'éducation, la recherche et le développement de produits." : "Showcasing innovative products I've built — from AI-powered learning tools to engaging educational platforms that transform how people learn.",
       link: "https://jerrychen-mcgill.github.io",
-      image: "/img/portfolio.jpg"
+      image: "/Personal-website/img/portfolio.jpg"
     },
     {
       name: "GitHub Projects",
       desc: lang === 'zh' ? '探索我的开源贡献和技术实验。' : lang === 'fr' ? "Explorez mes contributions open-source et mes expérimentations techniques." : "Explore my open-source contributions and technical experiments.",
       link: "https://github.com/JerryChen-McGill",
-      image: "/img/GitHub Projects.JPG"
+      image: "/Personal-website/img/GitHub Projects.JPG"
     }
   ];
 
@@ -531,25 +531,25 @@ const DailyLife = ({ lang }: { lang: Language }) => {
       title: lang === 'zh' ? '练字' : lang === 'fr' ? 'Calligraphie' : 'Calligraphy', 
       desc: lang === 'zh' ? '在每一笔中寻找平静。我每天练习中国传统书法。' : lang === 'fr' ? "Trouver la paix dans chaque trait. Je pratique la calligraphie traditionnelle chinoise quotidiennement." : "Finding peace in every stroke. I practice traditional Chinese calligraphy daily.", 
       icon: "🖋️", 
-      image: "/img/Calligraphy.jpg" 
+      image: "/Personal-website/img/Calligraphy.jpg" 
     },
     { 
       title: lang === 'zh' ? '桌游' : lang === 'fr' ? 'Jeux de Société' : 'Board Games', 
       desc: lang === 'zh' ? '策略、社交和乐趣。卡坦岛和火星改造是我最喜欢的。' : lang === 'fr' ? "Stratégie, interaction sociale et plaisir. Catan et Terraforming Mars sont mes favoris." : "Strategy, social interaction, and fun. Catan and Terraforming Mars are my favorites.", 
       icon: "🎲", 
-      image: "/img/boardgame.jpg" 
+      image: "/Personal-website/img/boardgame.jpg" 
     },
     { 
       title: lang === 'zh' ? '飞盘' : lang === 'fr' ? 'Disque Volant' : 'Frisbee', 
       desc: lang === 'zh' ? '运动与社区精神的完美结合。极限飞盘是我周末的仪式。' : lang === 'fr' ? "Le mélange parfait d'athlétisme et d'esprit communautaire. Le Frisbee ultime est mon rituel du week-end." : "The perfect mix of athleticism and community spirit. Ultimate Frisbee is my weekend ritual.", 
       icon: "🥏", 
-      image: "/img/Frisbee1.JPG" 
+      image: "/Personal-website/img/Frisbee1.JPG" 
     },
     { 
       title: lang === 'zh' ? '看书' : lang === 'fr' ? 'Lecture' : 'Reading', 
       desc: lang === 'zh' ? '哲学、科幻和技术类非虚构书籍的终身阅读之旅。' : lang === 'fr' ? "Un parcours à vie à travers la philosophie, la science-fiction et la非fiction technique." : "A lifelong journey through philosophy, sci-fi, and technical non-fiction.", 
       icon: "📚", 
-      image: "/img/reading.jpg" 
+      image: "/Personal-website/img/reading.jpg" 
     },
   ];
 
