@@ -6,6 +6,8 @@ import { translations } from './i18n';
 import { useLanguage } from './hooks/useLanguage';
 import { useSection } from './hooks/useSection';
 import { useSEO, addStructuredData, addLazyImageStyles } from './utils/seo';
+import { useAnalytics } from './hooks/useAnalytics';
+import { trackLanguageChange } from './utils/analytics';
 
 // Components
 import { Navbar } from './components/Navbar';
@@ -17,6 +19,7 @@ import { DailyLife } from './components/DailyLife';
 import { Blog } from './components/Blog';
 import { ScrollProgress } from './components/common/ScrollProgress';
 import { ScrollToTop } from './components/common/ScrollToTop';
+import { ExternalLink } from './components/common/Tracking';
 
 // Data
 import { researchProjects } from './data/research';
@@ -35,6 +38,9 @@ export default function App() {
     addLazyImageStyles();
   }, []);
 
+  // Initialize analytics
+  useAnalytics();
+
   // Update SEO on section change
   useSEO(activeSection);
 
@@ -42,6 +48,12 @@ export default function App() {
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }, [activeSection]);
+
+  // Track language changes
+  const handleLanguageChange = (newLang: 'en' | 'zh' | 'fr') => {
+    trackLanguageChange(lang, newLang);
+    setLang(newLang);
+  };
 
   const renderSection = () => {
     switch (activeSection) {
@@ -73,7 +85,7 @@ export default function App() {
         activeSection={activeSection}
         setActiveSection={setActiveSection}
         lang={lang}
-        setLang={setLang}
+        setLang={handleLanguageChange}
         navLabels={t.nav}
       />
 
@@ -99,8 +111,12 @@ export default function App() {
           <a href="mailto:shuai.chen@mail.mcgill.ca" className="flex items-center gap-1 hover:text-[#2D2D2D] transition-colors">
             <Mail size={14} /> {t.footer.sayHello}
           </a>
-          <a href="https://github.com/JerryChen-McGill" className="hover:text-[#2D2D2D] transition-colors">GitHub</a>
-          <a href="https://www.linkedin.com/in/jerry-chen-mcgill/" className="hover:text-[#2D2D2D] transition-colors">LinkedIn</a>
+          <ExternalLink href="https://github.com/JerryChen-McGill" label="GitHub">
+            GitHub
+          </ExternalLink>
+          <ExternalLink href="https://www.linkedin.com/in/jerry-chen-mcgill/" label="LinkedIn">
+            LinkedIn
+          </ExternalLink>
         </div>
       </footer>
     </div>

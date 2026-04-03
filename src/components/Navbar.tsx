@@ -14,6 +14,7 @@ interface NavbarProps {
     teaching: string;
     products: string;
     daily: string;
+    blog: string;
   };
 }
 
@@ -30,6 +31,7 @@ export const Navbar: React.FC<NavbarProps> = ({
     { id: 'teaching', label: navLabels.teaching },
     { id: 'products', label: navLabels.products },
     { id: 'daily', label: navLabels.daily },
+    { id: 'blog', label: navLabels.blog },
   ];
 
   return (
@@ -75,7 +77,7 @@ export const Navbar: React.FC<NavbarProps> = ({
             ))}
           </div>
 
-          {/* Mobile Navigation (Optimization 4: replaces select dropdown) */}
+          {/* Mobile Navigation */}
           <div className="lg:hidden">
             <MobileNav
               items={items}
