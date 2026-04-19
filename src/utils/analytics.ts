@@ -1,8 +1,7 @@
 // Google Analytics 4 Integration
-
+// GA script is loaded in index.html for reliability
 const GA_MEASUREMENT_ID = 'G-M99NRWL0WQ';
 
-// Declare gtag type
 declare global {
   interface Window {
     gtag?: (...args: any[]) => void;
@@ -10,35 +9,19 @@ declare global {
   }
 }
 
-// Initialize Google Analytics
-export const initGA = () => {
-  if (!GA_MEASUREMENT_ID) {
-    console.warn('GA Measurement ID not found. Set VITE_GA_MEASUREMENT_ID in .env');
-    return;
+// Check if gtag is available
+const isReady = (): boolean => {
+  if (!window.gtag) {
+    console.warn('GA gtag not loaded. Check index.html script tag.');
+    return false;
   }
-
-  // Load gtag.js script
-  const script = document.createElement('script');
-  script.async = true;
-  script.src = `https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`;
-  document.head.appendChild(script);
-
-  // Initialize dataLayer
-  window.dataLayer = window.dataLayer || [];
-  window.gtag = function gtag(...args: any[]) {
-    window.dataLayer?.push(args);
-  };
-  window.gtag('js', new Date());
-  window.gtag('config', GA_MEASUREMENT_ID, {
-    send_page_view: false, // We'll manually track page views
-  });
+  return true;
 };
 
-// Track page view
+// Track page view (manual, for SPA section changes)
 export const trackPageView = (path: string, title?: string) => {
-  if (!window.gtag) return;
-
-  window.gtag('event', 'page_view', {
+  if (!isReady()) return;
+  window.gtag!('event', 'page_view', {
     page_path: path,
     page_title: title || document.title,
     page_location: window.location.href,
@@ -52,9 +35,8 @@ export const trackEvent = (
   label?: string,
   value?: number
 ) => {
-  if (!window.gtag) return;
-
-  window.gtag('event', action, {
+  if (!isReady()) return;
+  window.gtag!('event', action, {
     event_category: category,
     event_label: label,
     value: value,
@@ -100,15 +82,5 @@ export const trackTimeOnPage = (seconds: number) => {
   trackEvent('time_on_page', 'engagement', `${bucket}s`, seconds);
 };
 
-export default {
-  initGA,
-  trackPageView,
-  trackEvent,
-  trackSectionView,
-  trackLanguageChange,
-  trackBlogPostView,
-  trackExternalLink,
-  trackDownload,
-  trackScrollDepth,
-  trackTimeOnPage,
-};
+// No-op initGA (script loaded via index.html)
+export const initGA = () => {};
