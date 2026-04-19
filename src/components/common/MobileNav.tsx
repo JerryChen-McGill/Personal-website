@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import { Section } from '../types';
-import { cn } from '../lib/utils';
+import { cn } from '../../lib/utils';
 
 interface MobileNavProps {
   items: Array<{ id: Section; label: string }>;

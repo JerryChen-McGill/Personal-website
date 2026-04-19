@@ -16,7 +16,7 @@ export const ExternalLink: React.FC<ExternalLinkProps> = ({
 }) => {
   const handleClick = () => {
     // Dynamically import to avoid circular dependency
-    import('../utils/analytics').then(({ trackExternalLink }) => {
+    import('../../utils/analytics').then(({ trackExternalLink }) => {
       trackExternalLink(href, label || href);
     });
   };
@@ -53,7 +53,7 @@ export const DownloadButton: React.FC<DownloadButtonProps> = ({
   const handleDownload = async () => {
     try {
       // Track download
-      const { trackDownload } = await import('../utils/analytics');
+      const { trackDownload } = await import('../../utils/analytics');
       trackDownload(fileType, fileName);
 
       // Trigger download
