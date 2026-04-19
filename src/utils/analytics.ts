@@ -1,6 +1,6 @@
 // Google Analytics 4 Integration
 
-const GA_MEASUREMENT_ID = import.meta.env.VITE_GA_MEASUREMENT_ID;
+const GA_MEASUREMENT_ID = 'G-MD63SGHFJF';
 
 // Declare gtag type
 declare global {
