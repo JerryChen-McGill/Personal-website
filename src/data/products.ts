@@ -8,6 +8,24 @@ export const products: Product[] = [
     image: "/Personal-website/img/portfolio.jpg"
   },
   {
+    name: "MathNexus",
+    desc: "An interactive math learning platform featuring classic puzzles like Sudoku, Tower of Hanoi, Tangram, and Gomoku. Built with React and designed to make mathematics engaging and fun for learners of all ages.",
+    link: "https://github.com/JerryChen-McGill/MathNexus",
+    image: "/Personal-website/img/mathnexus.jpg"
+  },
+  {
+    name: "KitchenMaster",
+    desc: "An AI-powered cooking assistant that helps users discover recipes, plan meals, and master culinary techniques. Leveraging Gemini API to provide intelligent cooking guidance and personalized recommendations.",
+    link: "https://github.com/JerryChen-McGill/kitchenMaster",
+    image: "/Personal-website/img/kitchenmaster.jpg"
+  },
+  {
+    name: "Client Project 1",
+    desc: "A professional website project developed for a client, featuring modern web design principles, responsive layouts, and engaging visual content. Demonstrates practical web development skills in a real-world context.",
+    link: "https://github.com/JerryChen-McGill/Client-Project-1",
+    image: "/Personal-website/img/clientproject1.jpg"
+  },
+  {
     name: "GitHub Projects",
     desc: "Explore my open-source contributions and technical experiments.",
     link: "https://github.com/JerryChen-McGill",
