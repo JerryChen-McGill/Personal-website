@@ -72,10 +72,10 @@ export const MobileNav: React.FC<MobileNavProps> = ({
         initial={{ x: '100%' }}
         animate={{ x: isOpen ? 0 : '100%' }}
         transition={{ type: 'spring', damping: 25, stiffness: 200 }}
-        className="fixed top-0 right-0 bottom-0 w-72 bg-[#FAFAF5] z-[60] lg:hidden shadow-2xl"
+        className="fixed top-0 right-0 bottom-0 w-72 bg-[#FAFAF5] z-[60] lg:hidden shadow-2xl flex flex-col"
       >
         {/* Header */}
-        <div className="flex justify-between items-center p-6 border-b border-black/5 bg-[#FAFAF5]">
+        <div className="flex justify-between items-center p-6 border-b border-black/5 bg-[#FAFAF5] shrink-0">
           <span className="font-serif italic text-xl font-semibold">Menu</span>
           <button
             onClick={() => setIsOpen(false)}
@@ -87,7 +87,7 @@ export const MobileNav: React.FC<MobileNavProps> = ({
         </div>
 
         {/* Navigation Items */}
-        <nav className="p-6">
+        <nav className="p-6 flex-1 bg-[#FAFAF5]">
           <ul className="space-y-2">
             {items.map((item) => (
               <li key={item.id}>
@@ -108,7 +108,7 @@ export const MobileNav: React.FC<MobileNavProps> = ({
         </nav>
 
         {/* Decorative element */}
-        <div className="absolute bottom-0 left-0 right-0 p-6 border-t border-black/5">
+        <div className="p-6 border-t border-black/5 bg-[#FAFAF5] shrink-0">
           <p className="text-xs text-black/40">Jerry Chen Portfolio</p>
         </div>
       </motion.div>
