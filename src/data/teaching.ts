@@ -87,7 +87,7 @@ const teachingData: Record<Lang, TeachingExperience[]> = {
     },
     {
       role: "小学教师",
-      institution: "先学后练学习社区，北京，中国",
+      institution: "先锋小苹果树学习社区，北京，中国",
       period: "2020年9月 – 2024年1月",
       points: [
         "教授2-6年级数学并领导STEM和体育项目。支持幼儿园儿童的日常护理和户外活动。",
