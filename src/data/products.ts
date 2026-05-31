@@ -41,18 +41,21 @@ const interestsData: Record<Lang, Interest[]> = {
     { title: 'Board Games', desc: "Strategy, social interaction, and fun. Catan and Terraforming Mars are my favorites.", icon: "🎲", image: "/Personal-website/img/boardgame.jpg" },
     { title: 'Frisbee', desc: "The perfect mix of athleticism and community spirit. Ultimate Frisbee is my weekend ritual.", icon: "🥏", image: "/Personal-website/img/Frisbee1.JPG" },
     { title: 'Reading', desc: "A lifelong journey through philosophy, sci-fi, and technical non-fiction.", icon: "📚", image: "/Personal-website/img/reading.jpg" },
+    { title: 'Texas Hold\'em', desc: "A game of strategy, psychology, and calculated risk. I enjoy the mental challenge and social dynamics of poker.", icon: "♠️", image: "/Personal-website/img/poker.jpg" },
   ],
   zh: [
     { title: '练字', desc: '在每一笔中寻找平静。我每天练习中国传统书法。', icon: "🖋️", image: "/Personal-website/img/Calligraphy.jpg" },
     { title: '桌游', desc: '策略、社交和乐趣。卡坦岛和火星改造是我最喜欢的。', icon: "🎲", image: "/Personal-website/img/boardgame.jpg" },
     { title: '飞盘', desc: '运动与社区精神的完美结合。极限飞盘是我周末的仪式。', icon: "🥏", image: "/Personal-website/img/Frisbee1.JPG" },
     { title: '看书', desc: '哲学、科幻和技术类非虚构书籍的终身阅读之旅。', icon: "📚", image: "/Personal-website/img/reading.jpg" },
+    { title: '德州扑克', desc: '策略、心理和计算风险的游戏。我喜欢扑克带来的思维挑战和社交互动。', icon: "♠️", image: "/Personal-website/img/poker.jpg" },
   ],
   fr: [
     { title: 'Calligraphie', desc: "Trouver la paix dans chaque trait. Je pratique la calligraphie traditionnelle chinoise quotidiennement.", icon: "🖋️", image: "/Personal-website/img/Calligraphy.jpg" },
     { title: 'Jeux de Société', desc: "Stratégie, interaction sociale et plaisir. Catan et Terraforming Mars sont mes favoris.", icon: "🎲", image: "/Personal-website/img/boardgame.jpg" },
     { title: 'Disque Volant', desc: "Le mélange parfait d'athlétisme et d'esprit communautaire. Le Frisbee ultime est mon rituel du week-end.", icon: "🥏", image: "/Personal-website/img/Frisbee1.JPG" },
     { title: 'Lecture', desc: "Un parcours à vie à travers la philosophie, la science-fiction et la non-fiction technique.", icon: "📚", image: "/Personal-website/img/reading.jpg" },
+    { title: 'Texas Hold\'em', desc: "Un jeu de stratégie, de psychologie et de risque calculé. J'apprécie le défi mental et la dynamique sociale du poker.", icon: "♠️", image: "/Personal-website/img/poker.jpg" },
   ]
 };
 

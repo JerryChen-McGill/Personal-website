@@ -47,7 +47,7 @@ export const MobileNav: React.FC<MobileNavProps> = ({
       {/* Mobile Menu Button */}
       <button
         onClick={() => setIsOpen(true)}
-        className="lg:hidden p-2 -mr-2 text-black/60 hover:text-black transition-colors"
+        className="lg:hidden p-2 -mr-2 text-black/60 hover:text-black transition-colors relative z-[70]"
         aria-label="Open menu"
       >
         <Menu size={24} />
@@ -61,7 +61,7 @@ export const MobileNav: React.FC<MobileNavProps> = ({
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.2 }}
-            className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 lg:hidden"
+            className="fixed inset-0 bg-black/50 backdrop-blur-sm z-[55] lg:hidden"
             onClick={() => setIsOpen(false)}
           />
         )}
@@ -72,14 +72,14 @@ export const MobileNav: React.FC<MobileNavProps> = ({
         initial={{ x: '100%' }}
         animate={{ x: isOpen ? 0 : '100%' }}
         transition={{ type: 'spring', damping: 25, stiffness: 200 }}
-        className="fixed top-0 right-0 bottom-0 w-72 bg-white z-50 lg:hidden shadow-2xl"
+        className="fixed top-0 right-0 bottom-0 w-72 bg-[#FAFAF5] z-[60] lg:hidden shadow-2xl"
       >
         {/* Header */}
-        <div className="flex justify-between items-center p-6 border-b border-black/5">
+        <div className="flex justify-between items-center p-6 border-b border-black/5 bg-[#FAFAF5]">
           <span className="font-serif italic text-xl font-semibold">Menu</span>
           <button
             onClick={() => setIsOpen(false)}
-            className="p-2 -mr-2 text-black/60 hover:text-black transition-colors"
+            className="p-2 -mr-2 text-black/60 hover:text-black transition-colors relative z-[70]"
             aria-label="Close menu"
           >
             <X size={24} />
