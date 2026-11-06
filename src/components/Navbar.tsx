@@ -13,9 +13,6 @@ interface NavbarProps {
     research: string;
     teaching: string;
     products: string;
-    myResearch: string;
-    myTeaching: string;
-    myProducts: string;
     daily: string;
     blog: string;
   };
@@ -39,15 +36,7 @@ export const Navbar: React.FC<NavbarProps> = ({
     { id: 'daily', label: navLabels.daily },
     { id: 'blog', label: navLabels.blog },
   ];
-  const visibleItems = isIsolatedSection
-    ? items.filter((item) => item.id === activeSection)
-    : items;
   const opensInNewTab: Section[] = ['research', 'teaching', 'products'];
-  const isolatedNavLabels: Partial<Record<Section, string>> = {
-    research: navLabels.myResearch,
-    teaching: navLabels.myTeaching,
-    products: navLabels.myProducts,
-  };
 
   return (
     <nav className="fixed top-0 left-0 w-full z-50 bg-[#FDFCFB]/80 backdrop-blur-md border-b border-black/5">
@@ -65,49 +54,42 @@ export const Navbar: React.FC<NavbarProps> = ({
           Jerry Chen
         </div>
 
-        {/* Desktop Navigation */}
-        <div className="hidden lg:flex gap-1">
-          {visibleItems.map((item) => {
-            const label = isIsolatedSection ? isolatedNavLabels[item.id] ?? item.label : item.label;
-            const className = cn(
-              "nav-button",
-              activeSection === item.id ? "nav-button-active" : "nav-button-inactive"
-            );
-
-            if (isIsolatedSection) {
-              return (
-                <span key={item.id} aria-current="page" className={className}>
-                  {label}
-                </span>
+        {/* Main navigation is available on Home and shared sections only. */}
+        {!isIsolatedSection && (
+          <div className="hidden lg:flex gap-1">
+            {items.map((item) => {
+              const className = cn(
+                "nav-button",
+                activeSection === item.id ? "nav-button-active" : "nav-button-inactive"
               );
-            }
 
-            if (opensInNewTab.includes(item.id)) {
+              if (opensInNewTab.includes(item.id)) {
+                return (
+                  <a
+                    key={item.id}
+                    href={`${window.location.pathname}#${item.id}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={className}
+                  >
+                    {item.label}
+                  </a>
+                );
+              }
+
               return (
-                <a
+                <button
                   key={item.id}
-                  href={`${window.location.pathname}#${item.id}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  onClick={() => setActiveSection(item.id)}
+                  aria-current={activeSection === item.id ? 'page' : undefined}
                   className={className}
                 >
-                  {label}
-                </a>
+                  {item.label}
+                </button>
               );
-            }
-
-            return (
-              <button
-                key={item.id}
-                onClick={() => setActiveSection(item.id)}
-                aria-current={activeSection === item.id ? 'page' : undefined}
-                className={className}
-              >
-                {label}
-              </button>
-            );
-          })}
-        </div>
+            })}
+          </div>
+        )}
 
         <div className="flex items-center gap-4">
           {/* Language Switcher */}
@@ -125,12 +107,6 @@ export const Navbar: React.FC<NavbarProps> = ({
               </button>
             ))}
           </div>
-
-          {isIsolatedSection && (
-            <span className="lg:hidden text-sm font-medium text-[#2D2D2D]">
-              {isolatedNavLabels[activeSection] ?? items.find((item) => item.id === activeSection)?.label}
-            </span>
-          )}
 
           {/* Mobile Navigation */}
           {!isIsolatedSection && <div className="lg:hidden">

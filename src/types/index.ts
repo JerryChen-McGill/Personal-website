@@ -106,9 +106,6 @@ export interface Translations {
     research: string;
     teaching: string;
     products: string;
-    myResearch: string;
-    myTeaching: string;
-    myProducts: string;
     daily: string;
     blog: string;
   };
