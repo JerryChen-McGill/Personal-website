@@ -14,7 +14,7 @@ export const Products: React.FC<ProductsProps> = ({ content, products }) => {
     <motion.div 
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      className="max-w-5xl pt-12"
+      className="max-w-6xl pt-12"
     >
       <h2 className="section-title">{content.title}</h2>
       <div className="flex justify-end mb-8">
@@ -27,33 +27,34 @@ export const Products: React.FC<ProductsProps> = ({ content, products }) => {
           <FileText size={18} /> {content.viewResume}
         </a>
       </div>
-      <div className="space-y-16">
+      <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6">
         {products.map((p, i) => (
-          <div key={i} className="group relative rounded-[40px] overflow-hidden border border-black/5 bg-white">
-            <div className="aspect-[21/9] overflow-hidden">
+          <article key={p.link} className="group overflow-hidden rounded-3xl border border-black/5 bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
+            <a href={p.link} target="_blank" rel="noreferrer" aria-label={`${content.visitProject}: ${p.name}`} className="block overflow-hidden">
               <LazyImage
                 src={p.image}
                 alt={p.name}
-                aspectRatio="21/9"
+                aspectRatio="4/3"
                 rounded="0"
                 priority={i === 0}
+                className="transition-transform duration-500 group-hover:scale-[1.03]"
               />
-            </div>
-            <div className="p-12 flex flex-col md:flex-row justify-between items-end md:items-center gap-8">
-              <div>
-                <h3 className="text-3xl font-serif italic mb-2">{p.name}</h3>
-                <p className="text-[#666] max-w-xl">{p.desc}</p>
+            </a>
+            <div className="flex min-h-44 flex-col p-6">
+              <div className="mb-5">
+                <h3 className="mb-2 font-serif text-2xl italic">{p.name}</h3>
+                <p className="text-sm leading-relaxed text-[#666] line-clamp-3">{p.desc}</p>
               </div>
               <a 
                 href={p.link} 
                 target="_blank" 
                 rel="noreferrer"
-                className="flex items-center gap-3 px-8 py-4 bg-black text-white rounded-full text-sm font-bold hover:bg-[#444] transition-all whitespace-nowrap"
+                className="mt-auto inline-flex w-fit items-center gap-2 rounded-full bg-black px-5 py-3 text-xs font-bold text-white transition-colors hover:bg-[#444]"
               >
-                {content.visitProject} <ExternalLink size={18} />
+                {content.visitProject} <ExternalLink size={15} />
               </a>
             </div>
-          </div>
+          </article>
         ))}
       </div>
     </motion.div>

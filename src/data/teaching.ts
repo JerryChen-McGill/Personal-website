@@ -5,6 +5,17 @@ type Lang = 'en' | 'zh' | 'fr';
 const teachingData: Record<Lang, TeachingExperience[]> = {
   en: [
     {
+      role: "Pre-K & K Assistant Educator",
+      institution: "Royal Vale H&S After-School Program, Montreal, Canada",
+      period: "Mar 2026 – Present",
+      points: [
+        "Supervised Pre-K and Kindergarten children, maintaining a safe and well-organized environment and supporting daily routines and transitions.",
+        "Planned and facilitated age-appropriate activities, actively participated in children’s play, and collaborated with educators and staff to coordinate daily program activities."
+      ],
+      image: "/Personal-website/img/ECE%E2%80%8B.jpg",
+      location: "On-site"
+    },
+    {
       role: "Teaching Assistant",
       institution: "McGill University, Montreal, Canada",
       period: "Jan 2026 – Present",
@@ -52,6 +63,17 @@ const teachingData: Record<Lang, TeachingExperience[]> = {
   ],
   zh: [
     {
+      role: "学前班及幼儿园助理教育工作者",
+      institution: "Royal Vale H&S 课后项目，蒙特利尔，加拿大",
+      period: "2026年3月 – 至今",
+      points: [
+        "照看学前班和幼儿园儿童，维护安全、有序的环境，并协助日常作息和活动过渡。",
+        "规划并组织适龄活动，积极参与儿童游戏，并与教育工作者及工作人员合作协调每日项目活动。"
+      ],
+      image: "/Personal-website/img/ECE%E2%80%8B.jpg",
+      location: "On-site"
+    },
+    {
       role: "教学助理",
       institution: "麦吉尔大学，蒙特利尔，加拿大",
       period: "2026年1月 – 至今",
@@ -98,6 +120,17 @@ const teachingData: Record<Lang, TeachingExperience[]> = {
     }
   ],
   fr: [
+    {
+      role: "Éducateur adjoint en prématernelle et maternelle",
+      institution: "Programme parascolaire Royal Vale H&S, Montréal, Canada",
+      period: "Mars 2026 – Présent",
+      points: [
+        "A supervisé les enfants de prématernelle et de maternelle, en maintenant un environnement sûr et bien organisé et en accompagnant les routines et transitions quotidiennes.",
+        "A planifié et animé des activités adaptées à leur âge, participé activement aux jeux des enfants et collaboré avec les éducateurs et le personnel pour coordonner les activités quotidiennes du programme."
+      ],
+      image: "/Personal-website/img/ECE%E2%80%8B.jpg",
+      location: "On-site"
+    },
     {
       role: "Assistant d'Enseignement",
       institution: "Université McGill, Montréal, Canada",

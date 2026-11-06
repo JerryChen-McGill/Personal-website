@@ -2,6 +2,24 @@ import { Product, Interest } from '../types';
 
 export const products: Product[] = [
   {
+    name: "Startup Board Game",
+    desc: "A browser-based startup board game exploring the challenges and decisions involved in building a company.",
+    link: "https://jerrychen-mcgill.github.io/startupboardgame/",
+    image: "https://image.thum.io/get/width/1200/crop/800/noanimate/https://jerrychen-mcgill.github.io/startupboardgame/"
+  },
+  {
+    name: "Wealth01",
+    desc: "An interactive web project focused on wealth and financial topics.",
+    link: "https://jerrychen-mcgill.github.io/Wealth01/#top",
+    image: "https://image.thum.io/get/width/1200/crop/800/noanimate/https://jerrychen-mcgill.github.io/Wealth01/"
+  },
+  {
+    name: "Interactive Web Project",
+    desc: "A web experience built for the browser, with an automatically captured preview of the live site.",
+    link: "https://frontend-self-eta-60.vercel.app/",
+    image: "https://image.thum.io/get/width/1200/crop/800/noanimate/https://frontend-self-eta-60.vercel.app/"
+  },
+  {
     name: "Personal Portfolio",
     desc: "Showcasing innovative products I've built — from AI-powered learning tools to engaging educational platforms that transform how people learn.",
     link: "https://jerrychen-mcgill.github.io",
