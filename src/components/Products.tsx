@@ -37,7 +37,7 @@ export const Products: React.FC<ProductsProps> = ({ content, products }) => {
       <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 xl:grid-cols-3">
         {products.map((p, i) => (
           <article key={p.name} className="group flex h-full flex-col overflow-hidden rounded-[1.5rem] border border-black/10 bg-white transition-all duration-300 hover:-translate-y-1 hover:border-black/20 hover:shadow-xl hover:shadow-black/5">
-            <a href={p.link} target="_blank" rel="noreferrer" aria-label={`${content.visitProject}: ${p.name}`} className="block overflow-hidden bg-[#F1EFEC]">
+            <a href={p.link} target="_blank" rel="noreferrer" aria-label={`${p.isMiniProgram ? content.scanInWechat : content.visitProject}: ${p.name}`} className="block overflow-hidden bg-[#F1EFEC]">
               <LazyImage
                 src={p.image}
                 alt={p.name}
@@ -59,7 +59,7 @@ export const Products: React.FC<ProductsProps> = ({ content, products }) => {
                   rel="noreferrer"
                   className="inline-flex items-center gap-2 rounded-full bg-[#2D2D2D] px-4 py-2.5 text-xs font-semibold text-white transition-colors hover:bg-black"
                 >
-                  {content.visitProject} <ExternalLink size={14} />
+                  {p.isMiniProgram ? content.scanInWechat : content.visitProject} <ExternalLink size={14} />
                 </a>
                 {p.repoLink && p.repoLink !== p.link && (
                   <a

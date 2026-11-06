@@ -63,6 +63,7 @@ export interface Product {
   link: string;
   repoLink?: string;
   image: string;
+  isMiniProgram?: boolean;
 }
 
 export interface ProductsContent {
@@ -73,6 +74,7 @@ export interface ProductsContent {
   viewResume: string;
   visitProject: string;
   visitGitHub: string;
+  scanInWechat: string;
 }
 
 // Daily Life Section

@@ -39,6 +39,7 @@ export const en: Translations = {
     viewResume: 'View Product Resume',
     visitProject: 'Visit Project',
     visitGitHub: 'Visit GitHub repo',
+    scanInWechat: 'Scan in WeChat',
   },
   daily: {
     title: 'Daily Life'
@@ -90,6 +91,7 @@ export const zh: Translations = {
     viewResume: '查看产品简历',
     visitProject: '访问项目',
     visitGitHub: '查看 GitHub 仓库',
+    scanInWechat: '微信扫码使用',
   },
   daily: {
     title: '日常生活'
@@ -141,6 +143,7 @@ export const fr: Translations = {
     viewResume: 'Voir le CV produit',
     visitProject: 'Voir le projet',
     visitGitHub: 'Dépôt GitHub',
+    scanInWechat: 'Scanner dans WeChat',
   },
   daily: {
     title: 'Vie Quotidienne'

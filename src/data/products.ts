@@ -2,6 +2,32 @@ import { Product, Interest } from '../types';
 
 export const products: Product[] = [
   {
+    name: "QuanHub",
+    desc: "An interactive decision tree that recommends suitable statistical methods based on your data type and research objectives.",
+    link: "https://jerrychen-mcgill.github.io/Quantitative-Method-Recommender/",
+    image: "/Personal-website/img/products/quanhub.png"
+  },
+  {
+    name: "Digit Recognition",
+    desc: "A web app that recognizes hand-written digits and lets you experience AI-powered image recognition.",
+    link: "https://digit-recognition-app-3bf2.onrender.com/",
+    image: "/Personal-website/img/products/digit-recognition.png"
+  },
+  {
+    name: "Digital Card Pro",
+    desc: "A personalized digital business card mini-program for creators, influencers, and people who enjoy sharing online.",
+    link: "https://jerrychen-mcgill.github.io/images/digital-card-qr.jpg",
+    image: "/Personal-website/img/products/digital-card.jpg",
+    isMiniProgram: true
+  },
+  {
+    name: "Color Paper",
+    desc: "A simple color paper mini-program with 360° color adjustment for a wide range of creative uses.",
+    link: "https://jerrychen-mcgill.github.io/images/color-paper-qr.jpg",
+    image: "/Personal-website/img/products/color-paper.jpg",
+    isMiniProgram: true
+  },
+  {
     name: "MomentNote iOS App",
     desc: "A minimalist daily journal for capturing thoughts, moods, and everyday moments, with customizable entries, on-device storage, iCloud sync, and image export.",
     link: "https://apps.apple.com/ca/app/momentnote-daily-journal/id6756984234",
