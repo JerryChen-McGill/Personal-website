@@ -25,6 +25,9 @@ export const Navbar: React.FC<NavbarProps> = ({
   setLang,
   navLabels,
 }) => {
+  const isolatedSections: Section[] = ['research', 'teaching', 'products'];
+  const isIsolatedSection = isolatedSections.includes(activeSection);
+
   const items: { id: Section; label: string }[] = [
     { id: 'home', label: navLabels.home },
     { id: 'research', label: navLabels.research },
@@ -38,8 +41,14 @@ export const Navbar: React.FC<NavbarProps> = ({
     <nav className="fixed top-0 left-0 w-full z-50 bg-[#FDFCFB]/80 backdrop-blur-md border-b border-black/5">
       <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
         <div
-          className="font-serif italic text-xl font-semibold tracking-tight cursor-pointer"
-          onClick={() => setActiveSection('home')}
+          className={cn(
+            "font-serif italic text-xl font-semibold tracking-tight",
+            isIsolatedSection ? "cursor-default" : "cursor-pointer"
+          )}
+          onClick={() => {
+            if (!isIsolatedSection) setActiveSection('home');
+          }}
+          aria-disabled={isIsolatedSection}
         >
           Jerry Chen
         </div>
@@ -49,10 +58,20 @@ export const Navbar: React.FC<NavbarProps> = ({
           {items.map((item) => (
             <button
               key={item.id}
-              onClick={() => setActiveSection(item.id)}
+              onClick={() => {
+                if (!isIsolatedSection || item.id === activeSection) {
+                  setActiveSection(item.id);
+                }
+              }}
+              disabled={isIsolatedSection && item.id !== activeSection}
+              aria-current={activeSection === item.id ? 'page' : undefined}
               className={cn(
                 "nav-button",
-                activeSection === item.id ? "nav-button-active" : "nav-button-inactive"
+                activeSection === item.id
+                  ? "nav-button-active"
+                  : isIsolatedSection
+                    ? "nav-button-inactive cursor-not-allowed opacity-40"
+                    : "nav-button-inactive"
               )}
             >
               {item.label}
@@ -83,6 +102,7 @@ export const Navbar: React.FC<NavbarProps> = ({
               items={items}
               activeSection={activeSection}
               setActiveSection={setActiveSection}
+              isIsolatedSection={isIsolatedSection}
             />
           </div>
         </div>

@@ -16,8 +16,11 @@ export const Teaching: React.FC<TeachingProps> = ({ content, experiences }) => {
       animate={{ opacity: 1 }}
       className="max-w-5xl pt-12"
     >
-      <div className="flex justify-between items-start mb-12">
-        <h2 className="section-title">{content.title}</h2>
+      <header className="mb-14 grid gap-8 border-b border-black/10 pb-12 md:grid-cols-[minmax(0,1fr)_auto] md:items-end">
+        <div className="max-w-3xl">
+          <h2 className="section-title mb-5">{content.title}</h2>
+          <p className="text-base leading-8 text-[#555] md:text-lg">{content.intro}</p>
+        </div>
         <a 
           href="https://mcgill-my.sharepoint.com/:b:/g/personal/shuai_chen_mail_mcgill_ca/IQCRUZiC7t4rSoNyWh5DlNm6Aeui2ddzFZXotaF4ZoHQq40" 
           target="_blank" 
@@ -26,7 +29,7 @@ export const Teaching: React.FC<TeachingProps> = ({ content, experiences }) => {
         >
           <FileText size={18} /> {content.viewResume}
         </a>
-      </div>
+      </header>
       <div className="space-y-32">
         {experiences.map((exp, i) => (
           <div key={i} className={`flex flex-col md:flex-row gap-12 items-start ${i % 2 === 1 ? "md:flex-row-reverse" : ""}`}>

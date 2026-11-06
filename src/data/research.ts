@@ -7,12 +7,12 @@ export const researchProjects: ResearchProject[] = [
     year: "2025"
   },
   {
-    type: "Forthcoming",
-    content: "Chen, S., Su, J., & Gao, J. (submitted). A Systematic Review of Artificial Intelligence Applications in K–12 Math Education: Trends, Effectiveness, and Challenges. Manuscript submitting to Interactive Learning Environments.",
+    type: "Submitted",
+    content: "Chen, S., Su, J., & Gao, J. (submitted). A Systematic Review of Artificial Intelligence Applications in K–12 Math Education: Trends, Effectiveness, and Challenges. Manuscript submitted to Interactive Learning Environments.",
     year: "2024"
   },
   {
-    type: "Forthcoming",
+    type: "Submitted",
     content: "Lobczowski, N. G., Li, S., Wu, M., Chen, S., Lin, Y., Yu, Y., Yibulyain, M., Dong, J., Damoulianos, H., & Bana, C. (submitted). Tailoring Training for Technology Integration to Secondary Mathematics Teachers: A Design Case. Proposal for the AERA Annual Conference.",
     year: "2024"
   }

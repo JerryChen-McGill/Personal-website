@@ -2,15 +2,23 @@ import { Product, Interest } from '../types';
 
 export const products: Product[] = [
   {
+    name: "MomentNote iOS App",
+    desc: "A minimalist daily journal for capturing thoughts, moods, and everyday moments, with customizable entries, on-device storage, iCloud sync, and image export.",
+    link: "https://apps.apple.com/ca/app/momentnote-daily-journal/id6756984234",
+    image: "https://image.thum.io/get/width/1200/crop/800/noanimate/https://apps.apple.com/ca/app/momentnote-daily-journal/id6756984234"
+  },
+  {
     name: "Startup Board Game",
     desc: "A browser-based startup board game exploring the challenges and decisions involved in building a company.",
     link: "https://jerrychen-mcgill.github.io/startupboardgame/",
+    repoLink: "https://github.com/JerryChen-McGill/startupboardgame",
     image: "https://image.thum.io/get/width/1200/crop/800/noanimate/https://jerrychen-mcgill.github.io/startupboardgame/"
   },
   {
     name: "Wealth01",
     desc: "An interactive web project focused on wealth and financial topics.",
     link: "https://jerrychen-mcgill.github.io/Wealth01/#top",
+    repoLink: "https://github.com/JerryChen-McGill/Wealth01",
     image: "https://image.thum.io/get/width/1200/crop/800/noanimate/https://jerrychen-mcgill.github.io/Wealth01/"
   },
   {
@@ -23,6 +31,7 @@ export const products: Product[] = [
     name: "Personal Portfolio",
     desc: "Showcasing innovative products I've built — from AI-powered learning tools to engaging educational platforms that transform how people learn.",
     link: "https://jerrychen-mcgill.github.io",
+    repoLink: "https://github.com/JerryChen-McGill/Personal-website",
     image: "/Personal-website/img/portfolio.jpg"
   },
   {
@@ -35,7 +44,7 @@ export const products: Product[] = [
     name: "KitchenMaster",
     desc: "An AI-powered cooking assistant that helps users discover recipes, plan meals, and master culinary techniques. Leveraging Gemini API to provide intelligent cooking guidance and personalized recommendations.",
     link: "https://github.com/JerryChen-McGill/kitchenMaster",
-    image: "/Personal-website/img/kitchenmaster.jpg"
+    image: "/Personal-website/img/GitHub Projects.JPG"
   },
   {
     name: "Client Project 1",
@@ -43,12 +52,6 @@ export const products: Product[] = [
     link: "https://github.com/JerryChen-McGill/Client-Project-1",
     image: "/Personal-website/img/clientproject1.jpg"
   },
-  {
-    name: "GitHub Projects",
-    desc: "Explore my open-source contributions and technical experiments.",
-    link: "https://github.com/JerryChen-McGill",
-    image: "/Personal-website/img/GitHub Projects.JPG"
-  }
 ];
 
 type Lang = 'en' | 'zh' | 'fr';

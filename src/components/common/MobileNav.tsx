@@ -7,12 +7,14 @@ interface MobileNavProps {
   items: Array<{ id: Section; label: string }>;
   activeSection: Section;
   setActiveSection: (s: Section) => void;
+  isIsolatedSection: boolean;
 }
 
 export const MobileNav: React.FC<MobileNavProps> = ({
   items,
   activeSection,
   setActiveSection,
+  isIsolatedSection,
 }) => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -38,6 +40,7 @@ export const MobileNav: React.FC<MobileNavProps> = ({
   }, [isOpen]);
 
   const handleNavClick = (section: Section) => {
+    if (isIsolatedSection && section !== activeSection) return;
     setActiveSection(section);
     setIsOpen(false);
   };
@@ -93,11 +96,15 @@ export const MobileNav: React.FC<MobileNavProps> = ({
               <li key={item.id}>
                 <button
                   onClick={() => handleNavClick(item.id)}
+                  disabled={isIsolatedSection && item.id !== activeSection}
+                  aria-current={activeSection === item.id ? 'page' : undefined}
                   className={cn(
                     "w-full text-left px-4 py-3 rounded-xl transition-all duration-200",
                     activeSection === item.id
                       ? "bg-black text-white font-medium"
-                      : "text-black/60 hover:bg-black/5 hover:text-black"
+                      : isIsolatedSection
+                        ? "text-black/30 cursor-not-allowed"
+                        : "text-black/60 hover:bg-black/5 hover:text-black"
                   )}
                 >
                   {item.label}

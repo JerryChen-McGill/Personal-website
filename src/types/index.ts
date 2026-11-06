@@ -20,7 +20,7 @@ export interface HomeContent {
 
 // Research Section
 export interface ResearchProject {
-  type: 'Poster' | 'Forthcoming' | 'Published';
+  type: 'Poster' | 'Submitted' | 'Published';
   content: string;
   year: string;
 }
@@ -32,8 +32,10 @@ export interface ResearchImage {
 
 export interface ResearchContent {
   title: string;
+  focusLine: string;
   intro: string;
   cvLink: string;
+  selectedWork: string;
 }
 
 // Teaching Section
@@ -48,6 +50,7 @@ export interface TeachingExperience {
 
 export interface TeachingContent {
   title: string;
+  intro: string;
   viewResume: string;
   onSite: string;
   online: string;
@@ -58,13 +61,18 @@ export interface Product {
   name: string;
   desc: string;
   link: string;
+  repoLink?: string;
   image: string;
 }
 
 export interface ProductsContent {
   title: string;
+  focusLine: string;
+  intro: string;
+  selectedProjects: string;
   viewResume: string;
   visitProject: string;
+  visitGitHub: string;
 }
 
 // Daily Life Section
