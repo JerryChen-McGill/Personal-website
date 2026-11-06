@@ -8,6 +8,9 @@ export const en: Translations = {
     research: 'Research',
     teaching: 'Teaching',
     products: 'Product',
+    myResearch: 'My Research',
+    myTeaching: 'My Teaching',
+    myProducts: 'My Products',
     daily: 'Daily Life',
     blog: 'Blog',
   },
@@ -18,21 +21,21 @@ export const en: Translations = {
     cta: 'Say Hello'
   },
   research: {
-    title: 'Research',
+    title: 'My Research',
     focusLine: 'Learning Sciences · Mathematics Education · Generative AI',
     intro: 'I am a PhD student in Learning Sciences at McGill University, working with Professor Nikki G. Lobczowski in the CREATE Lab. My research focuses on technology integration in mathematics education, specifically the design, application, and evaluation of generative AI to enhance mathematical learning.',
     cvLink: 'View Research CV',
     selectedWork: 'Selected research',
   },
   teaching: {
-    title: 'Teaching Experience',
+    title: 'My Teaching',
     intro: 'I enjoy working with children and helping them build confidence through teaching. I’m especially drawn to creating engaging learning experiences that make complex ideas feel approachable and invite students to explore.',
     viewResume: 'View Resume',
     onSite: 'On-site',
     online: 'Online'
   },
   products: {
-    title: 'Product Building',
+    title: 'My Products',
     focusLine: 'Educational technology · Product design',
     intro: 'My projects span interactive learning experiences, browser-based games, and web products. I use hands-on prototyping to explore how clear goals, intuitive interactions, and thoughtful visual design can make digital experiences engaging and useful. I’m interested in educational technology and product design roles where I can bring research-informed thinking and practical building together.',
     selectedProjects: 'Selected projects',
@@ -59,6 +62,9 @@ export const zh: Translations = {
     research: '研究',
     teaching: '教学',
     products: '产品',
+    myResearch: '我的研究',
+    myTeaching: '我的教学',
+    myProducts: '我的产品',
     daily: '日常生活',
     blog: '博客',
   },
@@ -69,21 +75,21 @@ export const zh: Translations = {
     cta: '打个招呼'
   },
   research: {
-    title: '研究',
+    title: '我的研究',
     focusLine: '学习科学 · 数学教育 · 生成式人工智能',
     intro: '我是麦吉尔大学学习科学专业的博士生，在 CREATE 实验室师从 Nikki G. Lobczowski 教授。我的研究重点是数学教育中的技术整合，特别是生成式人工智能在增强数学学习方面的设计、应用和评估。',
     cvLink: '查看研究简历',
     selectedWork: '代表性研究',
   },
   teaching: {
-    title: '教学经验',
+    title: '我的教学',
     intro: '我喜欢和孩子们一起工作，也享受通过教学帮助他们建立信心。我尤其喜欢设计有趣、有参与感的学习体验，让复杂的知识更容易理解，并鼓励学生主动探索。',
     viewResume: '查看简历',
     onSite: '线下',
     online: '线上'
   },
   products: {
-    title: '产品开发',
+    title: '我的产品',
     focusLine: '教育科技 · 产品设计',
     intro: '我的项目涵盖互动式学习体验、浏览器游戏和网页产品。我通过动手原型设计，探索如何用清晰的目标、直观的交互和用心的视觉设计，让数字体验更有趣也更实用。我希望在教育科技或产品设计岗位中，结合研究视角与实际产品开发。',
     selectedProjects: '精选项目',
@@ -110,6 +116,9 @@ export const fr: Translations = {
     research: 'Recherche',
     teaching: 'Enseignement',
     products: 'Produits',
+    myResearch: 'Ma recherche',
+    myTeaching: 'Mon enseignement',
+    myProducts: 'Mes produits',
     daily: 'Vie Quotidienne',
     blog: 'Blog',
   },
@@ -120,21 +129,21 @@ export const fr: Translations = {
     cta: 'Dire Bonjour'
   },
   research: {
-    title: 'Recherche',
+    title: 'Ma recherche',
     focusLine: "Sciences de l'apprentissage · Didactique des mathématiques · IA générative",
     intro: "Je suis étudiant au doctorat en sciences de l'apprentissage à l'Université McGill, travaillant avec la professeure Nikki G. Lobczowski au laboratoire CREATE. Mes recherches portent sur l'intégration des technologies dans l'enseignement des mathématiques, plus précisément sur la conception, l'application et l'évaluation de l'IA générative pour améliorer l'apprentissage des mathématiques.",
     cvLink: 'Voir le CV de recherche',
     selectedWork: 'Travaux sélectionnés',
   },
   teaching: {
-    title: "Expérience d'Enseignement",
+    title: 'Mon enseignement',
     intro: "J'aime travailler avec les enfants et les aider à prendre confiance grâce à l'enseignement. Je souhaite surtout créer des expériences d'apprentissage stimulantes qui rendent les idées complexes accessibles et encouragent les élèves à explorer.",
     viewResume: 'Voir le CV',
     onSite: 'Sur place',
     online: 'En ligne'
   },
   products: {
-    title: 'Création de Produits',
+    title: 'Mes produits',
     focusLine: 'Technologies éducatives · Conception de produits',
     intro: "Mes projets couvrent des expériences d'apprentissage interactives, des jeux sur navigateur et des produits Web. Le prototypage me permet d'explorer comment des objectifs clairs, des interactions intuitives et un design soigné peuvent rendre les expériences numériques utiles et engageantes. Je souhaite contribuer à des postes en technologies éducatives ou en conception de produits, en réunissant une approche éclairée par la recherche et la création concrète.",
     selectedProjects: 'Projets sélectionnés',

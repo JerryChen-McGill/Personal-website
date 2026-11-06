@@ -7,14 +7,12 @@ interface MobileNavProps {
   items: Array<{ id: Section; label: string }>;
   activeSection: Section;
   setActiveSection: (s: Section) => void;
-  isIsolatedSection: boolean;
 }
 
 export const MobileNav: React.FC<MobileNavProps> = ({
   items,
   activeSection,
   setActiveSection,
-  isIsolatedSection,
 }) => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -40,7 +38,6 @@ export const MobileNav: React.FC<MobileNavProps> = ({
   }, [isOpen]);
 
   const handleNavClick = (section: Section) => {
-    if (isIsolatedSection && section !== activeSection) return;
     setActiveSection(section);
     setIsOpen(false);
   };
@@ -94,21 +91,30 @@ export const MobileNav: React.FC<MobileNavProps> = ({
           <ul className="space-y-2">
             {items.map((item) => (
               <li key={item.id}>
-                <button
-                  onClick={() => handleNavClick(item.id)}
-                  disabled={isIsolatedSection && item.id !== activeSection}
-                  aria-current={activeSection === item.id ? 'page' : undefined}
-                  className={cn(
-                    "w-full text-left px-4 py-3 rounded-xl transition-all duration-200",
-                    activeSection === item.id
-                      ? "bg-black text-white font-medium"
-                      : isIsolatedSection
-                        ? "text-black/30 cursor-not-allowed"
+                {(['research', 'teaching', 'products'] as Section[]).includes(item.id) ? (
+                  <a
+                    href={`${window.location.pathname}#${item.id}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={() => setIsOpen(false)}
+                    className="block w-full rounded-xl px-4 py-3 text-left text-black/60 transition-all duration-200 hover:bg-black/5 hover:text-black"
+                  >
+                    {item.label}
+                  </a>
+                ) : (
+                  <button
+                    onClick={() => handleNavClick(item.id)}
+                    aria-current={activeSection === item.id ? 'page' : undefined}
+                    className={cn(
+                      "w-full text-left px-4 py-3 rounded-xl transition-all duration-200",
+                      activeSection === item.id
+                        ? "bg-black text-white font-medium"
                         : "text-black/60 hover:bg-black/5 hover:text-black"
-                  )}
-                >
-                  {item.label}
-                </button>
+                    )}
+                  >
+                    {item.label}
+                  </button>
+                )}
               </li>
             ))}
           </ul>
