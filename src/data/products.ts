@@ -43,14 +43,9 @@ export const products: Product[] = [
   {
     name: "KitchenMaster",
     desc: "An AI-powered cooking assistant that helps users discover recipes, plan meals, and master culinary techniques. Leveraging Gemini API to provide intelligent cooking guidance and personalized recommendations.",
-    link: "https://github.com/JerryChen-McGill/kitchenMaster",
+    link: "https://jerrychen-mcgill.github.io/KitchenMaster/",
+    repoLink: "https://github.com/JerryChen-McGill/kitchenMaster",
     image: "/Personal-website/img/GitHub Projects.JPG"
-  },
-  {
-    name: "Client Project 1",
-    desc: "A professional website project developed for a client, featuring modern web design principles, responsive layouts, and engaging visual content. Demonstrates practical web development skills in a real-world context.",
-    link: "https://github.com/JerryChen-McGill/Client-Project-1",
-    image: "/Personal-website/img/clientproject1.jpg"
   },
 ];
 
